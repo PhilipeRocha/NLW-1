@@ -1,0 +1,163 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    /*Alinhamento de caixa pelo lado de fora da caixa*/
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;  
+    align-items: center;
+}
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url('../extras-aula-1/arrow-left.svg');
+
+    display: flex;
+
+    width: 20px;
+    height: 24px;
+}
+form {
+    margin: 0 auto;
+    background-color: white;
+    /*PREENCHIMENTO */
+    padding: 64px;
+    border-radius: 8px;
+    margin-top: 80px;
+    max-width: 730px;
+    /*tamanho da caixa (no caso será do tamanho da borda, no F12*/
+}
+form h1 {
+    font-size: 36px; 
+}
+form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+form legend {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+form legend h2 {
+    font-size: 24px;
+}
+
+form legend span {
+    font-family: Ubuntu, sans-serif;
+    font-size: 14px;
+    color: var(--title-color)
+}
+form .field {
+    flex: 1;
+    display: flex;
+    /*os elementos da caixa seguem uma coluna */
+    flex-direction: column;
+    /*espaçamento vertical*/
+    margin-bottom: 24px;
+}
+form .field-group {
+    display: flex;
+}
+form input,
+form select {
+    background-color:#f0f0f5;
+
+    border: 0;
+
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    /*deixa um refresh na linha, dando a impressão de posicionamento*/
+    /*outline: none; */
+}
+form select {
+    /*os seguintes fazem com que o select perca caracteristicas feias
+    do google crome */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form label {
+    color: var(--primary-color);
+    font-family: Ubuntu, sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+
+}
+form .field-group .field + .field {
+    margin-left: 24px;
+}
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    cursor: pointer;
+    transition-duration: background-color 400ms;
+
+}
+form button:houver {
+    background-color: var(--title-color);
+}
+
+form input:focus, form select:focus {
+    background-color: rgb(231, 250, 250);
+}
+
+.items-grid {
+    display: grid;
+    /* grid é como flex, só que melhor pra certa ocasião*/
+    /*fr é fração, ele faz um cálculo e o posiciona corretamente*/
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+.items-grid li {
+    background-color: whitesmoke;
+    /*tira os bullets*/
+    list-style: none;
+    border: 2px solid rgb(187, 241, 187);
+    border-radius: 8px;
+    height: 180px;
+    padding: 42px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+    /*deixa uma impressão no cursor ao clicar*/
+    cursor: pointer;
+}
+
+.items-grid li span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
+.items-grid li.selected {
+    background: rgb(122, 238, 122);
+    border: 2px solid #320d72;
+}
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none;
+}
